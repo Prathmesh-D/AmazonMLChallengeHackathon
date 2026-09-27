@@ -1,0 +1,20 @@
+3650319/10320219 it is crashing at about this much of data
+
+Error in Terminal
+
+--- 1. Processing Training Data ---
+
+--- 2. Generating Training Candidates & Features ---
+  -> Building Inverted Index (Memory-Safe Token Blocking)...
+Indexing Pool:  40%|▍| 4089055/10320219 [03:04<04:41, 22124
+Traceback (most recent call last):
+  File "C:\Users\tpran\Desktop\mlchalange\normalization.py", line 375, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\tpran\Desktop\mlchalange\normalization.py", line 309, in main
+    train_candidates, train_blocking_scores = generate_candidates_multi_rule(train_s1, train_pool, top_k=30, threshold=0.55)
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpran\Desktop\mlchalange\normalization.py", line 83, in generate_candidates_multi_rule
+    inverted_index[token].add(pool_id)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+MemoryError
